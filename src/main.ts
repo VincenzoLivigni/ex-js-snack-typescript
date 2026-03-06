@@ -21,12 +21,15 @@ type Dipendente = {
   anniDiServizio: number[]
 }
 
-const user: Dipendente = {
-  nome: "Massimo",
-  cognome: "Ceccherini",
-  annoNascita: 1958,
-  sesso: "m",
-  anniDiServizio: [1979, 1980, 1985, 1988]
+// Snack 3
+type Developer = Dipendente & {
+  livelloEsperienza: "Junior" | "Mid" | "Senior",
+  linguaggi?: string[],
+  certificazioni: string[],
 }
 
-console.log(user);
+type ProjectManager = Dipendente & {
+  teamSize: number,
+  budgetGestito?: number,
+  stakeholderPrincipali: string[],
+}
